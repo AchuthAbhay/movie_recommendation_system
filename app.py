@@ -2,6 +2,8 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import gdown
+import os  
 
 def fetch_poster(movie_id):
     api_key = "df3fbef252815eeb3e593d6f3c46e004"
@@ -60,3 +62,9 @@ if st.button('Recommend'):
       st.text(names[4])
       st.image(posters[4])               
 
+# Auto-download similarity.pkl if missing
+file_path = 'similarity.pkl'
+if not os.path.exists(file_path):
+    st.write("Downloading similarity matrix from Google Drive...")
+    url = 'https://drive.google.com/file/d/1_zehUgoZj1ijUUWY4yj_dC9A8WzehhY4/view?usp=drive_link'  # Replace YOUR_FILE_ID
+    gdown.download(url, file_path, quiet=False)
