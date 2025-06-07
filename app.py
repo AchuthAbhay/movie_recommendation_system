@@ -4,9 +4,12 @@ import pandas as pd
 import requests
 import gdown
 import os  
+from dotenv import load_dotenv
+
+load_dotenv()  # load variables from .env file
 
 def fetch_poster(movie_id):
-    api_key = "df3fbef252815eeb3e593d6f3c46e004"
+    api_key = os.getenv('TMDB_API_KEY')
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}"
     response = requests.get(url)
     data = response.json()
@@ -66,5 +69,5 @@ if st.button('Recommend'):
 file_path = 'similarity.pkl'
 if not os.path.exists(file_path):
     st.write("Downloading similarity matrix from Google Drive...")
-    url = 'https://drive.google.com/file/d/1_zehUgoZj1ijUUWY4yj_dC9A8WzehhY4/view?usp=drive_link'  # Replace YOUR_FILE_ID
+    url = 'https://drive.google.com/uc?id=1_zehUgoZj1ijUUWY4yj_dC9A8WzehhY4'  # Replace YOUR_FILE_ID
     gdown.download(url, file_path, quiet=False)
