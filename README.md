@@ -55,11 +55,16 @@ This project uses two cleaned datasets from the [TMDb 5000 Movie Dataset](https:
 - Streamlit (for the web interface)  
 
 ---
+## User Interface Preview
+
+![image](https://github.com/user-attachments/assets/9485fcd8-cea4-466e-8e91-790db74bdd12)
+
+
 
 ## Note on Large Data File
   Due to size constraints, the similarity.pkl file is not included in this repo. The app automatically downloads this file from a Google Drive link on first run.
 
-![image](https://github.com/user-attachments/assets/9485fcd8-cea4-466e-8e91-790db74bdd12)
+
   
 
 ## Setup & Usage
