@@ -64,6 +64,10 @@ This project uses two cleaned datasets from the [TMDb 5000 Movie Dataset](https:
 ## Note on Large Data File
   Due to size constraints, the similarity.pkl file is not included in this repo. The app automatically downloads this file from a Google Drive link on first run.
 
+## Live Demo
+
+Check out the deployed Movie Recommendation App here:  
+[https://huggingface.co/spaces/Synaptra/movie-recommender-Achuthabhay](https://huggingface.co/spaces/Synaptra/movie-recommender-Achuthabhay)
 
   
 
